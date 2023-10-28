@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+@font-face {
+    font-family: 'Blorado';
+    src: url('path-to-blorado.woff') format('woff');
+  }
+  
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Be Vietnam Pro",sans-serif; */
+    font-family: 14.9px"Blorado",sans-serif;
+    scroll-behavior: smooth;
+}
+:root{
+    --bgOrange:#e84949;
+    --bg: #020a13;
+    --token:#999;
+}
+body{
+    font-family: Blorado, sans-serif;
+    margin: 0px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    background: var(--bg) !important;
+    padding-right: 0px !important;
+    cursor: none;
+}
+
+ .cursor-dot{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+}
+.cursor-outline{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 2px solid hsla(0, 0%, 100%, 0.5);
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: .1s;
+}
+
+#wrapper{
+    height: 100vh; 
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#wrapper::before{
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    color: rgba(113, 113, 113, 0.07);
+    position: fixed;
+    z-index: -1;
+    background: linear-gradient(currentcolor 1px, transparent 1px) 0% 0% / 94px 90px, linear-gradient(to right, currentcolor 1px, transparent 1px) transparent;
+    transition: all 0.5s linear 0s;
+}
+
+#wrapper::after{
+    background-image: radial-gradient(at 40% 40%, rgb(30, 144, 255) 0px, transparent 50%), radial-gradient(at 90% 10%, rgb(255, 105, 180) 0px, transparent 50%), radial-gradient(at 50% 95%, rgb(0, 255, 255) 0px, transparent 50%), radial-gradient(at 20% 30%, rgb(50, 205, 50) 0px, transparent 50%), radial-gradient(at 90% 90%, rgb(255, 255, 0) 0px, transparent 50%), radial-gradient(at 33% 50%, rgb(255, 69, 0) 0px, transparent 50%), radial-gradient(at 79% 53%, rgb(128, 0, 128) 0px, transparent 50%);
+    position: fixed;
+    content: "";
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    filter: blur(100px) saturate(100%);
+    top: 0px;
+    opacity: 0.1;
+    transform: translateZ(0px);
+}
+
+
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+
+}
+.logo{
+    width: 80px;
+}
+.nav-logo{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+.logo-text{
+    margin-left: 7.2rem;
+    font-size: 28px;
+    color: #FFFFFFCC;
+
+}
+.nav-items{
+    display: flex;
+    gap: 4rem;
+    padding: 0 4em;
+}
+.nav-items div{
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.navbar a{
+    text-decoration: none;
+    background-color: transparent;
+    color: #FFFFFFCC;
+}
+.navbar a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #C6C6C6;
+    margin: auto;
+    display: block;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+    transition: width 0.3s linear;
+}
+
+.nav-items div:hover{
+    transform: scale(1.03);
+    transition: 0.6s;
+    width: 100%;
+    
+}
+
+
+/* ABOUT-SECTION */
+.rotate-img{
+    display: none;
+}
+.about-section
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E1E1E1;
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+
+
+
+.about-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem;
+    margin-left: 100px;
+}
+
+.hero-title{
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-block-end: 14px;
+}
+
+.hero-title strong {
+    font-size: 3.5rem;
+    font-weight: inherit;
+    margin-block-end: 8px;
+}
+
+.about-description{
+    font-weight: 400;
+    width: 90%;
+    margin-top:0.1rem ;
+    color: #C6C6C6;
+    line-height: 1.5rem;
+    word-spacing: 0.18rem;
+    
+}
+
+.btn-cv{
+    background-color: rgba(113, 113, 113, 0.07);
+        width: fit-content;
+        color: white;
+        padding: 0.8rem 2.3rem;
+        box-shadow: 5px 5px 7px 0px #0000003f;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.5s;
+        font-weight: 500;
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
+}
+.btn-cv:hover{
+    background-color: cyan;
+    color: #020a13;
+}
+
+.about-right{
+    position: relative;
+
+}
+
+.absolute{
+    position: absolute;
+}
+
+.user-img{
+    padding: 2.5rem;
+    border-radius: 10px;
+    transition: all 1s;
+    /* filter: grayscale(1); */
+    animation: scaleImage 4s linear infinite;
+}
+
+/* @keyframes scaleImage{
+    0%{
+        filter: grayscale(0);
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+        filter: grayscale(0);
+        
+    }
+    100%{
+        box-shadow: 2px 2px 8px black;
+        transform: scale(1);
+        filter: grayscale(0);
+    }
+} */
+
+.about-right img{
+    border-radius: inherit;
+}
+
+.rotate-img{
+    display: block;
+    position: absolute;
+    bottom: 160px;
+    left: 750px;
+    width: 100px;
+    animation: rotate360 15s linear infinite reverse;
+}
+
+@keyframes rotate360 {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(1turn); }
+  }
+
+
+/* PROJECTS */
+
+
+
+
+
+
+
+
+
+  
