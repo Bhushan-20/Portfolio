@@ -274,7 +274,6 @@ body{
   }
 
   @media (max-width: 1140px) {
-    /* Adjust your styles here */
     body {
         font-size: 14px; /* Change the font size for smaller screens */
     }
@@ -305,6 +304,41 @@ body{
 
     .nav-items div {
         font-size: 18px; /* Reduce font size for navigation items */
+    }
+}
+@media(max-width:350px){
+   .nav-items{
+    flex-direction: column;
+    text-align: center;
+   }
+}
+
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 24px; /* Reduce font size for the logo text */
+    }
+    
+    .nav-items div {
+        font-size: 16px; /* Further reduce font size for navigation items */
+    }
+    
+    .nav-items {
+        padding: 0 1em; /* Adjust padding for navigation items */
+    }
+    
+    /* Add any additional responsive styles for smaller screens as needed */
+}
+
+
+  @media (max-width: 1140px) {
+    /* Adjust your styles here */
+    body {
+        font-size: 14px; /* Change the font size for smaller screens */
+    }
+
+    .container {
+        width: 100%; /* Make the container full width on smaller screens */
+        padding: 0 20px; /* Add padding to the container */
     }
 
     .about-section {
@@ -511,14 +545,30 @@ body{
     background-image: url(images/Projects/Project4.png);
 }
 
+/* PROJECT RESPONSIVE PART */
+@media(max-width:312px){
+    .project-content{
+        margin-bottom: 8rem;
+    }
+}
+
+@media(max-width:230px)
+{
+    .project-content{
+        margin-bottom: 50rem;
+    }
+}
 
 @media (max-width:1300px) {
     .page-header {
-      padding-top: 30px;
-      color:#C6C6C6;
-      text-align: center;
-      font-size: 40px;
+        font-size: 28px;
     }
+
+    .subheading {
+        font-size: 16px;
+        margin: 0;
+    }
+
     .project-container {
       padding: 5px;
       margin: 10px;
@@ -533,11 +583,13 @@ body{
       background-position: center;
     }
     .project-content {
+        width: 100%;
       scale: 0.5;
       bottom: 0;
       left: 0;
       right: 0;
       top: 0;
+      margin-inline-end: 50%;
     }
     .project-content-left {
       left: 0;
@@ -578,3 +630,85 @@ body{
       scale: 0.55;
     }
   }
+
+
+  @media screen and (max-width: 768px) {
+    .project-content {
+        padding: 1em;
+        font-size: 14px;
+    }
+
+    .project-content-left1,
+    .project-content-left,
+    .project-content-right {
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project-content {
+        padding: 0.5em;
+        font-size: 12px;
+    }
+
+    .project-content-left1,
+    .project-content-left,
+    .project-content-right {
+        left: 2%;
+    }
+}
+
+/* SKILLS  */
+
+.skills-container{
+    position: relative;
+    display: flex;
+    padding: 5rem;
+    margin: 10rem auto;
+    gap: 30px;
+
+}
+
+.fade-text{
+    position: absolute;
+    font-size: 15em;
+    color: #6c757d;
+    transform: rotate(90deg);
+    right:85%;
+    user-select: none;
+    opacity: 0.1;
+    
+}
+
+.skill-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.skill-subheading{
+    color: #C6C6C6;
+}
+
+.skill-right{
+    width: 50%;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+
+}
+
+.skills-logo{
+    width: 90px;
+    transition:all 0.5s ;
+
+}
+
+.skills-logo:hover{
+    transform: scale(1.2);
+}
+
+.icons{
+    width: 100px;
+}
