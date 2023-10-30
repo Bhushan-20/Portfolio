@@ -13,6 +13,7 @@
     <div class="cursor-outline" data-cursor-outline></div>
     <script src="script.js"></script>
 
+
     <div id="wrapper">
         <div class="container">
             <!-- NAVBAR -->
@@ -74,7 +75,7 @@
                             <img class="project-skill1" src="images/Tech-stack/python.svg" alt="">
                             <img class="project-skill1" src="images/Tech-stack/mysql-logo.svg" alt="">
                         </div>
-                        <h2 class="project-heading">Face Recognition Attendance System</h2>
+                        <h2 class="project-heading">Face Recognition Attendance</h2>
                         <div class="project-subheading">Face Recognition Attendance system built using python programming language for storing data, 
                             database used was MySQL. The Algorithm used to recognize face was LBPH algorithm</div>
 
@@ -164,6 +165,46 @@
             </div>
         </div>
         
+        <!-- SKILL SECTION -->
+        <div class=" container skills-container">
+            <div class="fade-text">Skills</div>
+
+            <div class="skill-left">
+                <h2 class="skills-heading">
+                    <span class="caps">M</span>e and <br>
+                    MyTech Stack
+                </h2>
+
+                <div class="skill-subheading">
+                    <p>
+                        I am a passionate and dedicated full stack web developer with a strong desire 
+                        to learn and grow in the field of web development. As a recent graduate or entry-level developer, 
+                        I am excited to apply the knowledge and skills I've acquired in school and to 
+                        create innovative and user-friendly web applications
+                    </p>
+                </div>
+            </div>
+
+            <div class="skill-right">
+
+                <img src="images/Tech-stack/C++.png" alt="" class="skills-logo icons">
+                <img src="images/Tech-stack/HTML.png" alt="" class="skills-logo">
+                <img src="images/Tech-stack/CSS.png" alt="" class="skills-logo">
+                <img src="images/Tech-stack/Javascript.svg" alt="" class="skills-logo">
+                <img src="images/Tech-stack/Tailwind.png" alt="" class="skills-logo">
+                <img src="images/Tech-stack/NodeJs.svg" alt="" class="skills-logo">
+                <img src="images/Tech-stack/Express.png" alt="" class="skills-logo">
+                <img src="images/Tech-stack/React.png" alt="" class="skills-logo">
+                <img src="images/Tech-stack/Git.svg" alt="" class="skills-logo">
+                <img src="images/Tech-stack/github1.svg" alt="" class="skills-logo icons">
+                <img src="images/Tech-stack/mysql-logo.svg" alt="" class="skills-logo icons" >
+                <img src="images/Tech-stack/MongoDB.svg" alt="" class="skills-logo">
+            </div>
+
+
+
+        </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -181,6 +222,17 @@
     backSpeed: 80,
     backDelay: 1000,
   });
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.getElementById("toggle-button");
+    const navbar = document.querySelector(".navbar");
+
+    toggleButton.addEventListener("click", function() {
+        navbar.classList.toggle("show-nav");
+    });
+});
+
   </script>
     
 </body>
