@@ -548,7 +548,7 @@ body{
 }
 
 .icon:hover{
-    color: orangered;
+    color: black;
     transition: all 0.4s;
 }
 
@@ -561,7 +561,7 @@ body{
     background-image: url(images/Projects/Project2.png);
 }
 #project3{
-    background-image: url(images/Projects/Project3.png);
+    background-image: url(images/Projects/Project6.png);
 }
 #project4{
     margin-left: 120px;
