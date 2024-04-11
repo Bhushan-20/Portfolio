@@ -479,7 +479,7 @@ body{
 
 
 .project-number-left{
-    left: -40px;
+    right: -40px;
     top: -45px;
 }
 
@@ -505,7 +505,7 @@ body{
 }
 
 .project-content-right{
-    left: 30%;
+    left: 10%;
 }
 
 .project-skills-container1{
@@ -558,7 +558,7 @@ body{
 
 #project2{
     margin-left: 120px;
-    background-image: url(images/Projects/Project2.png);
+    background-image: url(images/Projects/StudyNotion.png);
 }
 #project3{
     background-image: url(images/Projects/Project3.png);
@@ -947,4 +947,8 @@ footer{
     .socials-wrapper{
         margin-left: 60px;
     }
+}
+
+.live{
+    margin-left: 20px;
 }
